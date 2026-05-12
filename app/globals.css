@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   사용자 정의 폰트 슬롯 (Brand Sans / Brand Serif)
+   ------------------------------------------------------------
+   1. public/fonts/ 에 폰트 파일을 둡니다.
+      예) public/fonts/sans.woff2 , public/fonts/serif.woff2
+   2. 파일명이 다르면 아래 url("/fonts/…") 부분만 본인 파일명으로 바꾸세요.
+   3. 폰트를 비활성화하려면 해당 @font-face 블록을 통째로 주석 처리하면
+      자동으로 다음 폰트(Pretendard / Noto Serif KR CDN) 로 폴백됩니다.
+   4. weight 100-900 한 파일(가변 폰트) 외에 굵기별 파일을 따로 쓰려면
+      @font-face 블록을 굵기마다 추가하세요.
+   ============================================================ */
+@font-face {
+  font-family: "Brand Sans";
+  src: url("/fonts/sans.woff2") format("ttf");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Brand Serif";
+  src: url("/fonts/serif.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    /* 라이트 테마 (White + Navy Accent) (HSL 값) */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 19%;
+
+    --card: 224 50% 97%;
+    --card-foreground: 222 47% 19%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 19%;
+
+    --primary: 222 70% 33%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 224 50% 97%;
+    --secondary-foreground: 222 47% 19%;
+
+    --muted: 224 50% 95%;
+    --muted-foreground: 222 20% 45%;
+
+    --accent: 222 70% 33%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 224 30% 88%;
+    --input: 224 30% 88%;
+    --ring: 222 70% 33%;
+
+    --radius: 0.875rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-brand-cream text-brand-ink antialiased;
+    /* font-sans (Tailwind) 가 자동 적용. 사용자 정의 폰트가 우선,
+       없으면 Pretendard → 시스템 한글 폰트로 폴백됩니다. */
+    font-feature-settings: "ss01", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    @apply bg-brand-accent/30 text-brand-ink;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.22em] text-brand-accent;
+  }
+
+  .section-title {
+    @apply font-serif font-bold text-3xl leading-[1.25] tracking-tight text-brand-ink md:text-4xl lg:text-[2.75rem] lg:leading-[1.2];
+  }
+
+  .lead {
+    @apply text-base leading-relaxed text-brand-ink/70 md:text-lg;
+  }
+
+  .divider {
+    @apply h-px w-12 bg-brand-accent;
+  }
+
+  .grain-bg {
+    background-image: radial-gradient(
+      rgba(30, 58, 138, 0.06) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+}
