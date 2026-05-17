@@ -43,7 +43,7 @@ export function Programs() {
                 </span>
               </div>
 
-              <h3 className="mt-6 font-serif text-2xl leading-snug text-brand-ink md:text-[1.6rem]">
+              <h3 className="mt-6 font-serif font-bold text-2xl leading-snug text-brand-ink md:text-[1.6rem]">
                 {p.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-brand-ink/65">
@@ -61,17 +61,6 @@ export function Programs() {
                   </li>
                 ))}
               </ul>
-
-              <div className="mt-7 flex items-center justify-between border-t border-brand-ink/10 pt-5">
-                <span className="text-xs text-brand-ink/55">{p.duration}</span>
-                <Link
-                  href={siteContent.ctaShort.href}
-                  className="inline-flex items-center gap-1 text-sm font-medium text-brand-accent transition-colors hover:text-brand-ink"
-                >
-                  {programs.detailCtaLabel}
-                  <ArrowUpRight className="h-4 w-4" />
-                </Link>
-              </div>
             </article>
           ))}
         </div>

@@ -75,8 +75,8 @@ export function Hero() {
             </dl>
           </div>
 
-          {/* RIGHT: Images only */}
-          <div className="relative lg:col-span-7 overflow-visible">
+          {/* RIGHT: Images only — 핸드폰(<sm)에서는 숨김, 태블릿 이상부터 노출 */}
+          <div className="relative hidden sm:block lg:col-span-7 overflow-visible">
             <div
               className="
                 grid
