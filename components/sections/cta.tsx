@@ -9,10 +9,9 @@ type ChannelInputItem = (typeof siteContent.cta.channels)[number];
 
 function resolveChannel(c: ChannelInputItem) {
   const { contact } = siteContent;
+
   let value: string;
-  if ("value" in c) {
-    value = c.value;
-  } else if (c.valueKey === "phone") {
+  if (c.valueKey === "phone") {
     value = contact.phone.display;
   } else if (c.valueKey === "kakao") {
     value = contact.kakao;

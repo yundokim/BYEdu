@@ -43,7 +43,7 @@ export function Programs() {
                 </span>
               </div>
 
-              <h3 className="mt-6 font-serif font-bold text-2xl leading-snug text-brand-ink md:text-[1.6rem]">
+              <h3 className="mt-6 font-serif font-extrabold text-2xl leading-snug text-brand-ink md:text-[1.7rem]">
                 {p.title}
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-brand-ink/65">

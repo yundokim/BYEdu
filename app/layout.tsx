@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description: siteContent.meta.description,
   keywords: [...siteContent.meta.keywords],
   openGraph: {
-    title: siteContent.meta.ogTitle,
-    description: siteContent.meta.ogDescription,
+    title: siteContent.meta.title,
+    description: siteContent.meta.description,
     locale: "ko_KR",
     type: "website",
   },
