@@ -35,12 +35,12 @@ export function Logo({
         </span>
       )}
 
-      <span className="flex flex-col leading-none">
-        <span className="font-serif text-2xl font-bold tracking-tight text-brand-ink md:text-4xl">
+      <span className="flex flex-col items-center text-center leading-none">
+        <span className="font-serif text-2xl font-bold tracking-tight text-brand-ink whitespace-nowrap md:text-4xl">
           {brand.name}
         </span>
 
-        <span className="mt-1 text-[9px] font-medium tracking-[0.28em] text-brand-ink/45 md:text-[10px]">
+        <span className="mt-1 text-[9px] font-medium tracking-[0.28em] text-brand-ink/45 whitespace-nowrap md:text-[10px]">
           {brand.nameEn}
         </span>
       </span>

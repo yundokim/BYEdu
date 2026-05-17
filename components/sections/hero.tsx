@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { siteContent } from "@/content/site";
@@ -21,12 +21,7 @@ export function Hero() {
         <div className="grid items-start gap-14 lg:grid-cols-12 lg:gap-10">
           {/* LEFT */}
           <div className="lg:col-span-5">
-            <span className="eyebrow !text-brand-accentSoft">
-              <Sparkles className="h-3.5 w-3.5" />
-              {hero.eyebrow}
-            </span>
-
-            <h1 className="mt-6 font-serif font-bold text-4xl leading-[1.18] tracking-tight text-brand-cream md:text-5xl lg:text-[2.75rem] lg:leading-[1.1]">
+            <h1 className="font-serif font-bold text-4xl leading-[1.18] tracking-tight text-brand-cream md:text-5xl lg:text-[2.75rem] lg:leading-[1.1]">
               {hero.titleLine1}
               <br />
               <span className="relative inline-block">

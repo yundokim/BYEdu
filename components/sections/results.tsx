@@ -11,8 +11,7 @@ export function Results() {
       <div className="container relative">
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
-          <span className="eyebrow justify-center">{results.eyebrow}</span>
-          <h2 className="section-title mt-5">
+          <h2 className="section-title">
             {results.titleLine1}
             <br />
             {results.titleLine2}

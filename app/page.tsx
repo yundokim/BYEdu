@@ -15,9 +15,9 @@ export default function Home() {
       <Header />
       {/* 1) 실제 합격 사례 */}
       <Results />
-      {/* 2) 백양에듀 소개 */}
+      {/* 2) 대치 이음 소개 */}
       <Hero />
-      {/* 3) 백양에듀 특장점 */}
+      {/* 3) 대치 이음 특장점 */}
       <Why />
       {/* 4) 컨설턴트 소개 */}
       <Consultants />
