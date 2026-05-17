@@ -121,7 +121,7 @@ export function Examples() {
               <div
                 className="
                   grid
-                  items-start
+                  items-center
                   gap-6
                   sm:grid-cols-[1fr_auto_1fr]
                   sm:gap-8
