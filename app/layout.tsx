@@ -8,6 +8,21 @@ export const metadata: Metadata = {
   title: siteContent.meta.title,
   description: siteContent.meta.description,
   keywords: [...siteContent.meta.keywords],
+  icons: {
+    icon: [
+      {
+        url: "/favicon-light.png",
+        media: "(prefers-color-scheme: light)",
+        type: "image/png",
+      },
+      {
+        url: "/favicon-dark.png",
+        media: "(prefers-color-scheme: dark)",
+        type: "image/png",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
   openGraph: {
     title: siteContent.meta.title,
     description: siteContent.meta.description,
