@@ -12,17 +12,14 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-12 md:gap-10">
           <div className="md:col-span-5">
             <Logo />
-            <p className="mt-6 max-w-sm text-sm leading-relaxed text-brand-ink/65">
+            <p className="mt-6 max-w-sm whitespace-pre-line text-sm leading-relaxed text-brand-ink/65">
               {footer.description}
             </p>
             <div className="mt-7 space-y-1 text-sm text-brand-ink/65">
               <p>{contact.locationNote}</p>
+              <p>대표 {contact.representative}</p>
               <p>
-                대표 · {contact.representative} | 사업자등록번호{" "}
-                {contact.businessNumber}
-              </p>
-              <p>
-                {contact.phone.display} | {contact.email}
+                {contact.phone.display} · {contact.email}
               </p>
             </div>
           </div>
@@ -46,19 +43,6 @@ export function Footer() {
               </ul>
             </div>
           ))}
-
-          <div className="md:col-span-3">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] text-brand-ink/45">
-              {footer.hoursTitle}
-            </p>
-            <p className="mt-4 text-sm leading-relaxed text-brand-ink/75">
-              {contact.hours.weekday}
-              <br />
-              {contact.hours.saturday}
-              <br />
-              {contact.hours.sunday}
-            </p>
-          </div>
         </div>
 
         <div className="mt-14 flex flex-col items-start justify-between gap-4 border-t border-brand-ink/10 pt-7 text-xs text-brand-ink/45 md:flex-row md:items-center">

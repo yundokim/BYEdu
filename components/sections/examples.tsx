@@ -12,13 +12,24 @@ function PhotoFrame({
   photo,
   label,
   placeholderPath,
+  points,
+  pointVariant = "neutral",
 }: {
   photo: ExamplePhoto;
   label: string;
   placeholderPath: string;
+  points?: readonly string[];
+  pointVariant?: "before" | "after" | "neutral";
 }) {
   // literal narrowing 방지
   const src: string = photo.src;
+
+  const bulletColor =
+    pointVariant === "after"
+      ? "bg-brand-accent"
+      : pointVariant === "before"
+        ? "bg-brand-ink/40"
+        : "bg-brand-ink/40";
 
   return (
     <figure className="flex flex-col gap-3">
@@ -73,6 +84,20 @@ function PhotoFrame({
       <figcaption className="text-center text-xs font-medium tracking-[0.22em] text-brand-ink/55">
         {label}
       </figcaption>
+
+      {points && points.length > 0 && (
+        <ul className="mt-4 space-y-4">
+          {points.map((point, i) => (
+            <li
+              key={i}
+              className="flex items-start gap-3 text-lg leading-relaxed text-brand-ink/80 md:text-xl"
+            >
+              <span className={`mt-3 h-2 w-2 shrink-0 rounded-full ${bulletColor}`} />
+              <span>{point}</span>
+            </li>
+          ))}
+        </ul>
+      )}
     </figure>
   );
 }
@@ -133,6 +158,8 @@ export function Examples() {
                   photo={ex.before}
                   label="BEFORE · 수정 전"
                   placeholderPath={`public/examples/before-${idx + 1}.jpg`}
+                  points={ex.beforePoints}
+                  pointVariant="before"
                 />
 
                 {/* Arrow */}
@@ -161,15 +188,10 @@ export function Examples() {
                   photo={ex.after}
                   label="AFTER · 수정 후"
                   placeholderPath={`public/examples/after-${idx + 1}.jpg`}
+                  points={ex.afterPoints}
+                  pointVariant="after"
                 />
               </div>
-
-              {/* Note */}
-              {ex.note && (
-                <p className="mx-auto max-w-2xl pt-2 text-center text-sm leading-relaxed text-brand-ink/65">
-                  {ex.note}
-                </p>
-              )}
             </article>
           ))}
         </div>

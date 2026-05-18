@@ -49,18 +49,6 @@ export function Programs() {
               <p className="mt-3 text-sm leading-relaxed text-brand-ink/65">
                 {p.desc}
               </p>
-
-              <ul className="mt-6 space-y-2.5 border-t border-dashed border-brand-ink/15 pt-6">
-                {p.points.map((point) => (
-                  <li
-                    key={point}
-                    className="flex items-start gap-2.5 text-sm text-brand-ink/80"
-                  >
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand-accent" />
-                    <span>{point}</span>
-                  </li>
-                ))}
-              </ul>
             </article>
           ))}
         </div>
