@@ -333,7 +333,7 @@ export const siteContent = {
     titleLine2: "응답은 24시간 안에.",
     description:
       "전화 · 카카오톡 — 가장 편한 수단을 고르세요. 가장 빠른 방법은 카카오톡 핫라인입니다. 24시간 응답을 보장합니다.",
-    primaryCta: { label: "카카오톡으로 문의", href: "#" },
+    primaryCta: { label: "카카오톡으로 문의", href: "https://open.kakao.com/o/s8dnDuvi" },
     secondaryCta: { label: "프로그램 다시 보기", href: "#programs" },
     assurances: [
       "✓ 상담 비용 없음",
