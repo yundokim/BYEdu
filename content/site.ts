@@ -64,8 +64,8 @@ export const siteContent = {
   // ────────────────────────────────────────────────
   contact: {
     phone: {
-      display: "0507-1234-5678",
-      tel: "tel:050712345678",
+      display: "010-5144-1599",
+      tel: "tel:01051441599",
     },
     email: "hello@daechi-ieum.kr",
     kakao: "@대치이음",
@@ -158,10 +158,10 @@ export const siteContent = {
   // ────────────────────────────────────────────────
   consultants: {
     eyebrow: "Consultants · 컨설턴트 소개",
-    titleLine1: "한 명의 학생을,",
-    titleLine2: "두 명의 전문가가 봅니다.",
+    titleLine1: "학생에게 가장 적합한",
+    titleLine2: "컨설턴트가 맞춤 배정됩니다.",
     description:
-      "연세대 의대·자유전공 출신, 직접 입시를 치른 두 컨설턴트가 학생의 진로 방향에 맞춰 처음부터 끝까지 함께합니다.",
+      "연세대 의대·자유전공 출신, 직접 입시를 치른 컨설턴트가 학생의 진로 방향에 맞춰 처음부터 끝까지 함께합니다.",
     list: [
       {
         name: "박지훈",
@@ -349,7 +349,7 @@ export const siteContent = {
         label: "카카오톡 핫라인",
         valueKey: "kakao",
         sub: "24시간 응답 · 가장 빠른 채널",
-        href: "#",
+        href: "https://open.kakao.com/o/s8dnDuvi",
       },
       {
         icon: "Phone" as IconName,

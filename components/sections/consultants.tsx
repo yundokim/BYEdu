@@ -12,7 +12,7 @@ export function Consultants() {
           <span className="eyebrow justify-center">{consultants.eyebrow}</span>
           <h2 className="section-title mt-5">
             {consultants.titleLine1}
-            <br className="md:hidden" /> {consultants.titleLine2}
+            <br /> {consultants.titleLine2}
           </h2>
           <div className="divider mx-auto mt-7" />
           <p className="lead mt-7">{consultants.description}</p>
