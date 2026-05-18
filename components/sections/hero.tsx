@@ -22,7 +22,17 @@ export function Hero() {
           {/* LEFT */}
           <div className="lg:col-span-5">
             <h1 className="font-serif font-bold text-4xl leading-[1.18] tracking-tight text-brand-cream md:text-5xl lg:text-[2.75rem] lg:leading-[1.1]">
-              {hero.titleLine1}
+              {(() => {
+                const parts = hero.titleLine1.split(/,\s*/);
+                if (parts.length === 2) {
+                  return (
+                    <>
+                      {parts[0]},<br className="sm:hidden" /> {parts[1]}
+                    </>
+                  );
+                }
+                return hero.titleLine1;
+              })()}
               <br />
               <span className="relative inline-block">
                 <span className="relative z-10">

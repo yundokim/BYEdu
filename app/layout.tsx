@@ -4,14 +4,31 @@ import { siteContent } from "@/content/site";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(siteContent.meta.url),
   title: siteContent.meta.title,
   description: siteContent.meta.description,
   keywords: [...siteContent.meta.keywords],
   openGraph: {
     title: siteContent.meta.title,
     description: siteContent.meta.description,
+    url: siteContent.meta.url,
+    siteName: siteContent.meta.siteName,
     locale: "ko_KR",
     type: "website",
+    images: [
+      {
+        url: siteContent.meta.image,
+        width: 1200,
+        height: 630,
+        alt: siteContent.meta.imageAlt,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteContent.meta.title,
+    description: siteContent.meta.description,
+    images: [siteContent.meta.image],
   },
 };
 
